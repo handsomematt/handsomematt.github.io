@@ -1,0 +1,28 @@
+# dependencies
+# markdown: redcarpet
+# highlighter: pygments
+
+# permalinks
+permalink: pretty
+# relative_permalinks: true
+
+# setup
+title: matt stevens
+email: matt@handsomematt.co.uk
+description: >-
+  My blog
+baseurl: ""
+url: "http://handsomematt.co.uk"
+twitter_username: _handsomematt
+github_username:  handsomematt
+
+# Build settings
+#markdown: kramdown # redcarpet
+plugins:
+  - jekyll-feed
+  - jekyll-paginator
+
+paginate: 5
+
+github:
+  repo: https://github.com/HandsomeMatt/handsomematt.github.io

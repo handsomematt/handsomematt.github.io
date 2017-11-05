@@ -1,56 +1,47 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Matt Stevens</title>
+---
+layout: default
+title: blog
+---
 
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/pygment_trac.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Matt Stevens</h1>
-        <p>Programmer and Stuff</p>
-        <p>scriptfodder and gmodstore</p>
-        <p class="view"><a href="mailto:matt@handsomematt.co.uk">Personal Email <small>matt@handsomematt.co.uk</small></a></p>
-        <p class="view"><a href="mailto:matt@discordstudios.co">Work Email <small>matt@discordstudios.co</small></a></p>
-        <ul>
-          <li><a href="https://github.com/handsomematt"><strong><i class="fa fa-github-alt" aria-hidden="true"></i></strong> GitHub</a></li>
-          <li><a href="https://steamcommunity.com/id/handsome-matt"><strong><i class="fa fa-steam" aria-hidden="true"></i></strong> Steam</a></li>
-          <li><a href="https://twitter.com/_HandsomeMatt"><strong><i class="fa fa-twitter" aria-hidden="true"></i></strong> Twitter</a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>Stuff I did</h1>
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h2 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-        <p><em>You can see the source code for most of these projects on <a href="https://github.com/handsomematt">my GitHub</a>.</em></p>
+    {% comment %}
+    <ol class="category-list">
+      {% for category in post.categories %}
+        <li><a href="/#!/{{ category }}">{{ category }}</a></li>
+      {% endfor %}
+    </ol>
+    {% endcomment %}
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-        <p>todo someday</p>
 
-        <pre>             ,-.
-    ,     ,-.   ,-.
-   / \   (   )-(   )
-   \ |  ,.&gt;-(   )-&lt;
-    \|,' (   )-(   )
-     Y ___`-'   `-'
-     |/__/   `-'
-     |
-     |
-     |    -hrr-
-  ___|_____________
-</pre>
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="js/scale.fix.js"></script>
-  </body>
-</html>
+    {{ post.content }}
+
+
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
