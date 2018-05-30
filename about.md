@@ -4,15 +4,60 @@ title: about
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+you can contact me via email: matt@handsomematt.co.uk
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+you can use my gpg key:
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+```
+-----BEGIN PGP PUBLIC KEY BLOCK-----
 
-
-[jekyll-organization]: https://github.com/jekyll
+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
+iUxDDajG96y4wnFPLYtqOw==
+=4f+s
+-----END PGP PUBLIC KEY BLOCK-----
+```
