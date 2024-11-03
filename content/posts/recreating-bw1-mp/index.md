@@ -1,7 +1,7 @@
 ---
 date: "2016-10-25T22:38:26Z"
 title: Reverse Engineering Black & White Multiplayer
-summary: 'This summary is independent of the content.'
+summary: 'The official servers for Black & White were shut down in 2005, this project is an attempt to emulate them completely to allow multiplayer connectivity across the internet for anyone.'
 ---
 
 The official servers for Black & White were shut down in 2005, this project is
