@@ -1,0 +1,35 @@
+baseURL: "https://mattstevens.co.uk/"
+title: "matt stevens"
+languageCode: en-GB
+enableRobotsTXT: true
+theme: ["PaperMod"]
+
+params:
+  author: matt
+  contact:
+    email: "matt@mattstevens.co.uk"
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  homeInfoParams:
+    Title: Hi I'm Matt
+    Content:
+      Working on [sbox.game](https://sbox.game) at [facepunch](https://facepunch.com).
+      Already did [gmodstore.com](https://gmodstore.com)
+
+  socialIcons:
+    - name: email
+      url: "mailto:matt@mattstevens.co.uk"
+    - name: github
+      url: "https://github.com/handsomematt"
+    - name: x
+      url: "https://x.com/handsomematt_"
+    - name: steam
+      url: "https://steamcommunity.com/id/mattonetwothree/"
+    - name: discord
+      url: "https://discord.com/users/539799813236064266"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
