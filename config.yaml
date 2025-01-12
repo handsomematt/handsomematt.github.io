@@ -29,7 +29,3 @@ params:
     - name: discord
       url: "https://discord.com/users/539799813236064266"
 
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
